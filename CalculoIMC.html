@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+
+<h1>Cálculo del IMC</h1>
+
+El índice de masa corporal es una razón matemática que asocia la masa y la talla de un individuo, ideada por el estadístico belga Adolphe Quetelet, por lo que también se conoce como índice de Quetelet.
+
+<br><br>
+
+<script>
+
+	function calcularIMC(peso,altura) {
+
+		return (peso/(altura*altura));
+	}
+
+	nombre = prompt("Inserte su nombre: ");
+	peso = prompt("¿" + nombre + ", cuál es su peso?: ");
+	altura = prompt("¿" + nombre + ", cuál es su altura?: ");
+
+	imc = calcularIMC(peso,altura);
+	document.write("Hola " + nombre + " su IMC calculado es: " + imc);
+
+	if (imc < 18.5){
+		document.write("<br>")
+		document.write(" Su IMC esta dentro del intervalo bajo");
+	}
+
+	if (imc > 18.5 && imc < 24.9){
+		document.write("<br>")
+		document.write(" Su IMC esta dentro del intervalo Normal");
+	}
+
+	if (imc > 25 && imc < 30){
+		document.write("<br>")
+		document.write(" Su IMC esta en Sobrepeso");
+	}
+
+	if (imc >= 30){
+		document.write("<br>")
+		document.write(" Su IMC está encima de lo recomendado");
+	}
+
+
+</script>
